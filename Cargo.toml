@@ -1,0 +1,22 @@
+[package]
+name = "lh-gps-spoof-detector"
+version = "0.1.0"
+edition = "2021"
+authors = ["Sameer Tawade <ops@logihertz.com>"]
+description = "Production-grade, zero-dependency Rust Multi-Band GNSS & India NavIC (IRNSS) Spoofing Detector, Doppler-Pseudorange & AGC/CN0 Anomaly Analyzer, Keplerian Ephemeris Verifier, and 10-Rule PNT Security Posture Auditor"
+license = "Apache-2.0"
+repository = "https://github.com/Logihertz-Systems-OPC-Pvt-Ltd/lh-gps-spoof-detector"
+readme = "README.md"
+keywords = ["gnss", "navic", "gps-spoofing", "pnt-security", "ephemeris"]
+categories = ["command-line-utilities", "science::geo", "cryptography"]
+
+[lib]
+name = "lh_gps_spoof_detector"
+path = "src/lib.rs"
+
+[[bin]]
+name = "lh-gps-spoof"
+path = "src/main.rs"
+
+[dependencies]
+# 100% Zero External Dependencies - Rust Standard Library (std) only.

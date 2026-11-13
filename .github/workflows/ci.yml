@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Build, Lint & Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Cache Cargo dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Check code formatting
+        run: cargo fmt --check
+
+      - name: Run Clippy linter
+        run: cargo clippy --all-targets -- -D warnings
+
+      - name: Run test suite
+        run: cargo test --verbose
+
+      - name: Verify CLI binary execution
+        run: |
+          cargo run -- --version
+          cargo run -- --help
+          cargo run -- scan fixtures/hardened_gnss_policy.json --format table
+          cargo run -- scan fixtures/hardened_gnss_policy.json --format json
+          cargo run -- scan fixtures/hardened_gnss_policy.json --format sarif
+          cargo run -- verify-nmea fixtures/sample_nmea_stream.txt --format table
+          cargo run -- verify-nmea fixtures/sample_nmea_stream.txt --format json
+          # analyze-epochs exits with 1 on detected spoofing as intended
+          cargo run -- analyze-epochs fixtures/sample_gnss_epochs.json --format table || test $? -eq 1
+          # check-ephemeris exits with 1 on invalid ephemeris in fixture as intended
+          cargo run -- check-ephemeris fixtures/sample_ephemeris.json --format table || test $? -eq 1

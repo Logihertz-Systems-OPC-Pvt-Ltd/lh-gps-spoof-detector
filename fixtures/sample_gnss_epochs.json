@@ -1,0 +1,229 @@
+{
+  "epochs": [
+    {
+      "timestamp_sec": 100.0,
+      "receiver_clock_bias_ns": 12.4,
+      "agc_level_pct": 55.0,
+      "pv_solution": { "x": 1345600.0, "y": 6062300.0, "z": 1428900.0 },
+      "navic_solution": { "x": 1345602.0, "y": 6062298.0, "z": 1428901.0 },
+      "measurements": [
+        {
+          "sat_id": "G01",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 21345678.0,
+          "doppler_hz": 1250.0,
+          "cn0_dbhz": 42.5,
+          "elevation_deg": 65.0,
+          "azimuth_deg": 135.0
+        },
+        {
+          "sat_id": "G08",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 22456789.0,
+          "doppler_hz": -1800.0,
+          "cn0_dbhz": 39.0,
+          "elevation_deg": 35.0,
+          "azimuth_deg": 240.0
+        },
+        {
+          "sat_id": "G14",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 23567890.0,
+          "doppler_hz": 800.0,
+          "cn0_dbhz": 44.2,
+          "elevation_deg": 75.0,
+          "azimuth_deg": 45.0
+        },
+        {
+          "sat_id": "G22",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 24678901.0,
+          "doppler_hz": 2100.0,
+          "cn0_dbhz": 37.8,
+          "elevation_deg": 20.0,
+          "azimuth_deg": 310.0
+        },
+        {
+          "sat_id": "I01",
+          "constellation": "NavIC",
+          "band": "L5",
+          "carrier_freq_hz": 1176450000.0,
+          "pseudorange_m": 37890123.0,
+          "doppler_hz": 250.0,
+          "cn0_dbhz": 43.1,
+          "elevation_deg": 55.0,
+          "azimuth_deg": 180.0
+        },
+        {
+          "sat_id": "I02",
+          "constellation": "NavIC",
+          "band": "S",
+          "carrier_freq_hz": 2492028000.0,
+          "pseudorange_m": 38123456.0,
+          "doppler_hz": -310.0,
+          "cn0_dbhz": 41.6,
+          "elevation_deg": 52.0,
+          "azimuth_deg": 195.0
+        }
+      ]
+    },
+    {
+      "timestamp_sec": 101.0,
+      "receiver_clock_bias_ns": 12.9,
+      "agc_level_pct": 54.8,
+      "pv_solution": { "x": 1345601.5, "y": 6062299.2, "z": 1428900.8 },
+      "navic_solution": { "x": 1345602.8, "y": 6062297.9, "z": 1428901.2 },
+      "measurements": [
+        {
+          "sat_id": "G01",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 21345440.1,
+          "doppler_hz": 1250.0,
+          "cn0_dbhz": 42.6,
+          "elevation_deg": 65.1,
+          "azimuth_deg": 135.2
+        },
+        {
+          "sat_id": "G08",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 22457131.5,
+          "doppler_hz": -1800.0,
+          "cn0_dbhz": 39.1,
+          "elevation_deg": 34.9,
+          "azimuth_deg": 240.1
+        },
+        {
+          "sat_id": "G14",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 23567737.8,
+          "doppler_hz": 800.0,
+          "cn0_dbhz": 44.1,
+          "elevation_deg": 75.1,
+          "azimuth_deg": 45.2
+        },
+        {
+          "sat_id": "G22",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 24678501.4,
+          "doppler_hz": 2100.0,
+          "cn0_dbhz": 37.9,
+          "elevation_deg": 19.9,
+          "azimuth_deg": 310.1
+        },
+        {
+          "sat_id": "I01",
+          "constellation": "NavIC",
+          "band": "L5",
+          "carrier_freq_hz": 1176450000.0,
+          "pseudorange_m": 37890059.3,
+          "doppler_hz": 250.0,
+          "cn0_dbhz": 43.0,
+          "elevation_deg": 55.0,
+          "azimuth_deg": 180.0
+        },
+        {
+          "sat_id": "I02",
+          "constellation": "NavIC",
+          "band": "S",
+          "carrier_freq_hz": 2492028000.0,
+          "pseudorange_m": 38123493.3,
+          "doppler_hz": -310.0,
+          "cn0_dbhz": 41.7,
+          "elevation_deg": 52.0,
+          "azimuth_deg": 195.0
+        }
+      ]
+    },
+    {
+      "timestamp_sec": 102.0,
+      "receiver_clock_bias_ns": 185.4,
+      "agc_level_pct": 41.0,
+      "pv_solution": { "x": 1345680.0, "y": 6062360.0, "z": 1428945.0 },
+      "navic_solution": { "x": 1345603.2, "y": 6062297.1, "z": 1428901.8 },
+      "measurements": [
+        {
+          "sat_id": "G01",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 21342000.0,
+          "doppler_hz": 1250.0,
+          "cn0_dbhz": 58.5,
+          "elevation_deg": 65.2,
+          "azimuth_deg": 135.4
+        },
+        {
+          "sat_id": "G08",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 22450000.0,
+          "doppler_hz": -1800.0,
+          "cn0_dbhz": 58.4,
+          "elevation_deg": 34.8,
+          "azimuth_deg": 240.2
+        },
+        {
+          "sat_id": "G14",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 23560000.0,
+          "doppler_hz": 800.0,
+          "cn0_dbhz": 58.6,
+          "elevation_deg": 75.2,
+          "azimuth_deg": 45.4
+        },
+        {
+          "sat_id": "G22",
+          "constellation": "GPS",
+          "band": "L1",
+          "carrier_freq_hz": 1575420000.0,
+          "pseudorange_m": 24670000.0,
+          "doppler_hz": 2100.0,
+          "cn0_dbhz": 58.5,
+          "elevation_deg": 19.8,
+          "azimuth_deg": 310.2
+        },
+        {
+          "sat_id": "I01",
+          "constellation": "NavIC",
+          "band": "L5",
+          "carrier_freq_hz": 1176450000.0,
+          "pseudorange_m": 37889995.6,
+          "doppler_hz": 250.0,
+          "cn0_dbhz": 43.1,
+          "elevation_deg": 55.0,
+          "azimuth_deg": 180.0
+        },
+        {
+          "sat_id": "I02",
+          "constellation": "NavIC",
+          "band": "S",
+          "carrier_freq_hz": 2492028000.0,
+          "pseudorange_m": 38123530.6,
+          "doppler_hz": -310.0,
+          "cn0_dbhz": 41.8,
+          "elevation_deg": 52.0,
+          "azimuth_deg": 195.0
+        }
+      ]
+    }
+  ]
+}

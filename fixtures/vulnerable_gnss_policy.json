@@ -1,0 +1,18 @@
+{
+  "multi_constellation_enabled": false,
+  "navic_irnss_enabled": false,
+  "multi_band_diversity": false,
+  "nma_enabled": false,
+  "cn0_surge_monitor_enabled": false,
+  "agc_compression_monitor_enabled": false,
+  "doppler_pseudorange_rate_check_enabled": false,
+  "clock_bias_drift_guard_enabled": false,
+  "ins_kalman_coupling_enabled": false,
+  "keplerian_ephemeris_check_enabled": false,
+  "spatial_variance_check_enabled": false,
+  "elevation_mask_deg": 4.0,
+  "authenticated_rtcm": false,
+  "secure_nmea_binding": false,
+  "ins_holdover_failover_enabled": false,
+  "forensic_event_logging_enabled": false
+}
