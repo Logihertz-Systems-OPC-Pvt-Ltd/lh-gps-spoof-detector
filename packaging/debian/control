@@ -1,0 +1,9 @@
+Package: lh-gps-spoof-detector
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Sameer Tawade <ops@logihertz.com>
+Homepage: https://www.logihertz.com
+Description: lh-gps-spoof - Doppler-Pseudorange Residual Divergence Invariant
+ Pure-Rust multi-band GPS (L1/L2/L5) & India NavIC (IRNSS L5/S-band) spoofing detector analyzing C/N0 surges, AGC compression, spatial variance collapse, Doppler-pseudorange divergence, and Keplerian ephemeris bounds.
