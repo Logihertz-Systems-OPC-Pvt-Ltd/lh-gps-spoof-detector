@@ -143,23 +143,36 @@ Exported SARIF documents validate against the official OASIS schema (`sarif-sche
 
 ---
 
-## Section 6: Future Development Roadmap & Extension Architecture
+## 6. Standalone Future Development Roadmap (`v0.2.0` — `v0.5.0`)
 
-### Milestone v0.2.0: Modular Extensions & Telemetry Streaming
-- **Policy Pack Plugin Hooks**: Enable external declarative YAML/JSON rule-pack loading without source modification.
-- **Hardware Telemetry Streaming**: Real-time integration with SPI, I2C, UART, CAN, and eBPF kernel event rings.
-- **Configurable Severity Weights**: Support custom industrial profiles (e.g. Nuclear/Medical safety vs. Commercial IoT).
+`lh-gps-spoof-detector` is developed as an independent, standalone open-source project. The following roadmap defines the planned architectural, algorithmic, and protocol enhancements for upcoming point releases of `lh-gps-spoof-detector`:
 
-### Milestone v0.5.0: Native STRUCT OS Integration & Daemonless IPC
-- **STRUCT OS Security Bus**: Native zero-copy shared memory integration with the STRUCT OS Security Command Center.
-- **Automated Remediation Synthesis**: Direct IPC bridge with `lh-auto-remediation` for automatic synthesizing of verified unified diffs.
-- **Hardware Root-of-Trust Attestation**: Cryptographic sealing of telemetry reports via TPM 2.0 PCR-bound quotes.
+| Target Release | Milestone Focus | Planned Technical Deliverables for `lh-gps-spoof-detector` |
+|---|---|---|
+| **`v0.2.0`** | Parser & Protocol Expansion | Add Galileo E1/E5a (OSNMA TESLA key-chain verification), GLONASS L1/L2, and dual-antenna carrier-phase Angle-of-Arrival (AoA) spoofing discriminators. |
+| **`v0.3.0`** | Deep Algorithmic & Stateful Analysis | Implement Receiver Autonomous Integrity Monitoring (RAIM weighted least-squares parity-space $\chi^2$ fault detection and exclusion). |
+| **`v0.4.0`** | Remediation, Synthesis & Format Interop | Add tightly-coupled 6-DoF IMU / wheel-odometry Kalman filter innovation gating to detect slow ramp-away trajectory spoofing. |
+| **`v0.5.0`** | High-Throughput Performance & Formal Verification | Implement native u-blox UBX-RXM-RAWX / UBX-SEC-SIG and Septentrio SBF binary telemetry stream parsers. |
 
-### Milestone v1.0.0: High-Assurance Certification & Hardening
-- **FIPS 140-3 Validation**: Cryptographic module boundary verification and NIST CAVP compliance testing.
-- **Common Criteria EAL4+ Alignment**: Formal verification of deterministic security targets and functional invariants.
-- **Automotive & Industrial Compliance**: Formal baseline compliance with ISO 21434 (Automotive Cybersecurity) and IEC 62443 (Industrial Automation & Control Systems).
-- **Signed Binary Attestation**: In-toto attestation and Cosign cryptographic signing across all release artifacts.
+### 6.1 `v0.2.0` — Parser & Protocol Expansion
+- **Format & Protocol Ingestion**: Add Galileo E1/E5a (OSNMA TESLA key-chain verification), GLONASS L1/L2, and dual-antenna carrier-phase Angle-of-Arrival (AoA) spoofing discriminators.
+- **Zero-Dependency Architecture**: Pure standard library implementation with deterministic parsing guarantees and strict error handling.
+- **Verification & Telemetry**: Regression test suites verifying schema edge-cases, malformed payload rejections, and SARIF v2.1.0 output fidelity.
+
+### 6.2 `v0.3.0` — Deep Algorithmic & Stateful Analysis
+- **Algorithmic Core**: Implement Receiver Autonomous Integrity Monitoring (RAIM weighted least-squares parity-space $\chi^2$ fault detection and exclusion).
+- **State Machine & Analysis Engine**: High-fidelity state tracking, cycle detection, and invariant checking with minimal computational overhead.
+- **Differential & Regression Verification**: Comprehensive test harnesses covering stateful transitions, edge conditions, and mathematical boundary constraints.
+
+### 6.3 `v0.4.0` — Remediation, Synthesis & Format Interoperability
+- **Synthesis & Interoperability**: Add tightly-coupled 6-DoF IMU / wheel-odometry Kalman filter innovation gating to detect slow ramp-away trajectory spoofing.
+- **Automated Remediation Workflows**: Idempotent generation of verified configuration patches, policy rules, and standardized cross-format exports.
+- **Contract & Artifact Validation**: Cryptographic baseline verification and end-to-end integration testing for synthesized deliverables.
+
+### 6.4 `v0.5.0` — High-Throughput Performance & Formal Verification
+- **High-Throughput Optimization**: Implement native u-blox UBX-RXM-RAWX / UBX-SEC-SIG and Septentrio SBF binary telemetry stream parsers.
+- **Hardware & Kernel Acceleration**: Vectorized SIMD/eBPF/sub-millisecond streaming execution with bounded memory allocation.
+- **Formal Verification & Assurance**: Mathematical proof of invariant preservation, false-positive calibration, and high-assurance certification baselines.
 
 ---
 
